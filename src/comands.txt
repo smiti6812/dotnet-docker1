@@ -1,0 +1,33 @@
+PS C:\Users\smiti6812\Docker\dotnet-docker> dotnet new webapp -n myWebApp -o src --no-https
+
+
+PS C:\Users\smiti6812\Docker\dotnet-docker> cd src
+PS C:\Users\smiti6812\Docker\dotnet-docker\src> dotnet run --urls http://localhost:5000
+
+-
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker images
+
+
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker tag dotnet-docker:latest dotnet-docker:v1.0.0
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker images
+
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker rmi dotnet-docker:v1.0.0
+Untagged: dotnet-docker:v1.0.0
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker images
+
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker run dotnet-docker
+
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker run --publish 5000:80 dotnet-docker
+
+PS C:\Users\smiti6812\Docker\dotnet-docker> docker run -d -p 5000:80 dotnet-docker
+
+$ docker restart wonderful_kalam
+
+$ docker stop wonderful_kalam
+
+remove container:
+$ docker rm wonderful_kalam 
+
+to give a name to a container:
+$ docker run -d -p 5000:80 --name dotnet-app dotnet-docker
+
