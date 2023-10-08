@@ -1,9 +1,7 @@
 services:
  db:
    image: postgres: latest
-   restart: always
-   ports:
-     - 5432:5432
+   restart: always 
    environment:
      POSTGRES_PASSWORD: example
      POSTGRES_USER: postgres
